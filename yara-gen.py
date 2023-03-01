@@ -8,7 +8,6 @@
 import argparse
 from os.path import exists
 
-
 def argParser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", help="input csv file, format: type,indicator", required=True)
@@ -49,11 +48,9 @@ if __name__ == '__main__':
         stringCounter=1
 
         for item in rawData:
-            print(item)
             if item[0]=="#" or len(item) <2 or "type,id" in item: #skipping line, comment statement or header
                 continue
             else:
-                print (item)
                 item=item.strip() #removes new line
                 item=item.split(',')
                 ruleString=item[1]
@@ -78,5 +75,3 @@ if __name__ == '__main__':
         fileWriter.write("}\n")
     else:
         print ("ERROR: Input file not found")
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
