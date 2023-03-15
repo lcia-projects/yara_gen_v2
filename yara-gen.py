@@ -41,7 +41,7 @@ if __name__ == '__main__':
             ruleName = ruleName.replace('_', '')
             ruleName = ruleName.replace(',', '')
 
-        firstLine=ruleName + " { \n"
+        firstLine="rule " + ruleName + " { \n"
         fileWriter.write(firstLine)
         fileWriter.write("\tstrings: \n")
 
